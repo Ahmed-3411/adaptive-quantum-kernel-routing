@@ -1,0 +1,20 @@
+{
+  "protocol_version": "2026-09-18-v1",
+  "dataset": "wine", "n_qubits": 4,
+  "max_train": 40, "max_test": 20, "test_size": 0.3,
+  "seeds": [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],
+  "inner_folds": 5, "teacher_epochs": 15, "teacher_lr": 0.05,
+  "router_epochs": 100, "router_lr": 0.01,
+  "svm_C": 1.0, "kernel_backend": "statevector", "torch_threads": 1,
+  "variants": ["hard", "soft", "margin_weighted"],
+  "bootstrap_draws": 20000, "bootstrap_seed": 20260918,
+  "minimum_mean_improvement": 0.02, "alpha": 0.05,
+  "primary_comparator": "alignment_joint",
+  "decision_rule": "mean gain >= .02, positive bootstrap lower limit, Holm p <= .05 for t, Wilcoxon, and corrected-resampled t across three variants; matched-control gain must also be positive",
+  "all_wrong_policy": "zero sample weight; uniform target placeholder",
+  "hard_tie_policy": "highest positive signed margin; first kernel for exact ties",
+  "soft_target": "uniform distribution over OOF-correct experts",
+  "margin_weighted_target": "positive OOF signed margins normalized over correct experts",
+  "bank_policy": "fit alignment teacher within each inner fold; fit full outer-training teacher; freeze outer theta for every imitation and matched-control gate",
+  "inference_scope": "exploratory repeated splits of the same finite Wine dataset; not independent population replications"
+}

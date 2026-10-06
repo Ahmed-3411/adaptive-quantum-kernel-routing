@@ -1,0 +1,11 @@
+{
+ "protocol_version":"2026-09-18-diagnostics-v1",
+ "datasets":{"wine":4,"xor":2,"synth_hard":4},
+ "seeds":[0,1,2,3,4,5,6,7,8,9],
+ "max_train":40,"max_test":20,"teacher_epochs":15,"teacher_lr":0.05,
+ "kernel_backend":"statevector","svm_C":1.0,"torch_threads":1,
+ "probe_outer_folds":5,"probe_inner_folds":4,
+ "probes":["linear","mlp","majority"],
+ "mlp_hidden":[16,16],"mlp_max_iter":1000,
+ "purpose":"Exploratory nested predictability and hindsight decomposition; no Expert-Imitation expansion or tuning"
+}

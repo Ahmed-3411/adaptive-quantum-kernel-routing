@@ -1,0 +1,10 @@
+{
+  "protocol_version": "2026-09-18-stability-v1",
+  "datasets": {"xor": 2, "synth_hard": 4},
+  "data_seeds": [0,1,2], "training_seeds": [0,1,2,3,4,5,6,7],
+  "learning_rates": [0.01,0.05,0.1], "epoch_budgets": [15,75],
+  "modes": ["joint", "gate_only"], "max_train": 40, "max_test": 20,
+  "kernel_backend": "statevector", "torch_threads": 1, "svm_C": 1.0,
+  "frozen_bank": "full-training alignment teacher, seed=data_seed, 15 epochs, lr=.05",
+  "inference": "descriptive distributions within each fixed split; no pooling restarts as independent dataset replications; no test-selected best restart"
+}
