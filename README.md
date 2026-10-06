@@ -254,12 +254,8 @@ The highest-value next experiment is designed to distinguish between two explana
 
 ## Status
 
-**Research ongoing.**
+**ongoing.**
 
 Adaptive quantum-kernel routing is mathematically valid and the component kernels are complementary, but the present objectives do not reliably convert local expert information into a globally useful kernel for the downstream SVM.
 
----
 
-## Contact
-
-Feedback, replication attempts, and technical discussion are welcome.
