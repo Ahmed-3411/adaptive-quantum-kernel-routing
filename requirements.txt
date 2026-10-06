@@ -1,0 +1,9 @@
+# Tested on Linux x86_64, CPython 3.12.14. CPU-only torch build.
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch==2.14.0+cpu
+pennylane==0.45.1
+numpy==2.3.5
+scipy==1.17.0
+scikit-learn==1.8.0
+matplotlib==3.10.8
+pytest==9.1.1
